@@ -10,11 +10,11 @@ def idts(problem):
         frontier = [Node(problem.initial)]
         while frontier:
             node = frontier.pop()
-            nodesExplored += 1
             if problem.goal_test(node.state):
                 return node
             if nodesExplored > 1000000:
                 return None
             if node.depth < max_depth:
+                nodesExplored += 1
                 frontier.extend(node.expand(problem))
     return None
