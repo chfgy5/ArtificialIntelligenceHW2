@@ -15,18 +15,17 @@ class Problem:
         The result would be a list, since there are only four possible actions
         in any given state of the environment """
         
-        possible_actions = ['UP', 'DOWN', 'LEFT', 'RIGHT']       
+        possible_actions = ['DOWN', 'RIGHT', 'LEFT', 'UP']       
         index_blank_square = self.find_blank_square(state)
 
-
-        if index_blank_square > 11:
-            possible_actions.remove('DOWN')
-        if index_blank_square % 4 == 3:
-            possible_actions.remove('RIGHT')
-        if index_blank_square % 4 == 0:
-            possible_actions.remove('LEFT')
         if index_blank_square < 4:
             possible_actions.remove('UP')
+        if index_blank_square % 4 == 0:
+            possible_actions.remove('LEFT')
+        if index_blank_square % 4 == 3:
+            possible_actions.remove('RIGHT')
+        if index_blank_square > 11:
+            possible_actions.remove('DOWN')
 
         return possible_actions
 
