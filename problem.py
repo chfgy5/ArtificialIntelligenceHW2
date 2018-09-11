@@ -18,14 +18,15 @@ class Problem:
         possible_actions = ['UP', 'DOWN', 'LEFT', 'RIGHT']       
         index_blank_square = self.find_blank_square(state)
 
-        if index_blank_square < 4:
-            possible_actions.remove('UP')
-        if index_blank_square % 4 == 0:
-            possible_actions.remove('LEFT')
-        if index_blank_square % 4 == 3:
-            possible_actions.remove('RIGHT')
+
         if index_blank_square > 11:
             possible_actions.remove('DOWN')
+        if index_blank_square % 4 == 3:
+            possible_actions.remove('RIGHT')
+        if index_blank_square % 4 == 0:
+            possible_actions.remove('LEFT')
+        if index_blank_square < 4:
+            possible_actions.remove('UP')
 
         return possible_actions
 

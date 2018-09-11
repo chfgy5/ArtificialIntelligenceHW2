@@ -2,7 +2,7 @@ import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
 def puzz_breadth_first(start,end):
-    front = [[puzzle]]
+    front = [[puzzle1]]
     expanded = []
     expanded_nodes=0
     while front:
