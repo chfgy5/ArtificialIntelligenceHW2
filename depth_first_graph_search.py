@@ -1,17 +1,23 @@
 from node import *
 import problem
+import time
 
 def dfgs(problem):
-    frontier = [(Node(problem.initial))]  # Stack
-    explored = set()
-    while frontier:
-        node = frontier.pop()
+    fringe = [(Node(problem.initial))]  # Stack
+    closed = set()
+    start_time = time.time()
+    while fringe:
+        node = fringe.pop()
         if problem.goal_test(node.state):
+            print("Nodes expanded:", closed.__len__())
+            print("Time taken (ms):", (time.time() - start_time) * 1000)
             return node
-        if explored.__len__() > 1000000:
+        if closed.__len__() >= 1000000:
+            print("Nodes expanded:", closed.__len__())
+            print("Time taken (ms):", (time.time() - start_time) * 1000)
             break
-        if(node.state not in explored):
-            explored.add(node.state)
-            frontier.extend(node.expand(problem))
+        if(node.state not in closed):
+            closed.add(node.state)
+            fringe.extend(node.expand(problem))
     
     return None

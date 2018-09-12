@@ -11,18 +11,21 @@ if(node):
     print(node.solution())
 else:
     print("No solution found")
+print("\n")
 
 node = idts(problem2)
 if(node):
     print(node.solution())
 else:
     print("No solution found")
+print("\n")
 
 node = dfgs(problem1)
 if(node):
     print(node.solution())
 else:
     print("No solution found")
+print("\n")
 
 node = dfgs(problem2)
 if(node):

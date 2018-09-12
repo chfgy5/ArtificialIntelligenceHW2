@@ -2,7 +2,7 @@ import pprint
 pp = pprint.PrettyPrinter(indent=4)
 
 def puzz_breadth_first(start,end):
-    front = [[puzzle1]]
+    front = [[puzzle2]]
     expanded = []
     expanded_nodes=0
     while front:
@@ -105,13 +105,13 @@ def heuristic_2(puzz):
 puzzle1 = str([[1,2,7,3],[5,6,11,4], [9,10,15,8],[13,14,12,0]])
 puzzle2 = str([[5,1,7,3],[9,2,11,4], [13,6,15,8],[0,10,14,12]])
 end = str([[1,2,3,4],[5,6,7,8], [9,10,11,12],[13,14,15,0]])
-print("A*")
-puzz_astar(puzzle1,end)
-print("\n\nBFS")
-puzz_breadth_first(puzzle1,end)
-print("--------------------------")
-print("A*")
-puzz_astar(puzzle2,end)
+# print("A*")
+# puzz_astar(puzzle1,end)
+# print("\n\nBFS")
+# puzz_breadth_first(puzzle1,end)
+# print("--------------------------")
+# print("A*")
+# puzz_astar(puzzle2,end)
 print("\n\nBFS")
 puzz_breadth_first(puzzle2,end)
 
