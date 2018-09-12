@@ -1,3 +1,5 @@
+# Reference: https://github.com/aimacode/aima-python/blob/master/search.py
+
 from node import * 
 
 class Problem:

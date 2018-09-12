@@ -1,3 +1,5 @@
+# Reference: https://en.wikipedia.org/wiki/A*_search_algorithm
+
 import sys
 import datetime
 

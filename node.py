@@ -1,3 +1,5 @@
+# Reference: https://github.com/aimacode/aima-python/blob/master/search.py
+
 class Node:
     def __init__(self, state, parent=None, action=None, path_cost=0):
         # Create a search tree Node, derived from a parent by an action.
