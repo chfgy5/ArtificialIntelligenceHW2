@@ -63,19 +63,12 @@ Iterative deepening tree search and depth first graph search are implemented usi
     * [[5, 1, 7, 3], [0, 2, 11, 4], [9, 6, 15, 8], [13, 10, 14, 12]]
     * [[0, 1, 7, 3], [5, 2, 11, 4], [9, 6, 15, 8], [13, 10, 14, 12]]
     * [[1, 0, 7, 3], [5, 2, 11, 4], [9, 6, 15, 8], [13, 10, 14, 12]]
-<<<<<<< HEAD
 * Solution Sequence
     * No solution found
 * Nodes Expanded
     * 1,000,000 Nodes
 * Time Taken
-    * 18714.244 ms
-
---
-
-Code referenced: https://github.com/aimacode/aima-python/blob/master/search.py
-=======
-    
+    * 18714.244 ms    
  
 ### A* Search:
 ##### A)
@@ -95,4 +88,7 @@ Code referenced: https://github.com/aimacode/aima-python/blob/master/search.py
     * [[5, 1, 7, 3], [0, 2, 11, 4], [9, 6, 15, 8], [13, 10, 14, 12]]
     * [[0, 1, 7, 3], [5, 2, 11, 4], [9, 6, 15, 8], [13, 10, 14, 12]]
     * [[1, 0, 7, 3], [5, 2, 11, 4], [9, 6, 15, 8], [13, 10, 14, 12]]
->>>>>>> cb483786ea561618069d2d01ac42687b906a3e00
+
+--
+
+Code referenced: https://github.com/aimacode/aima-python/blob/master/search.py
