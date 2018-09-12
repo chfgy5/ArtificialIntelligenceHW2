@@ -8,24 +8,27 @@ problem2 = problem.Problem(test2, goal)
 
 node = idts(problem1)
 if(node):
-    print(node.solution())
+    print(*node.solution(), sep='\n')
 else:
     print("No solution found")
+print("\n")
 
 node = idts(problem2)
 if(node):
-    print(node.solution())
+    print(*node.solution(), sep='\n')
 else:
     print("No solution found")
+print("\n")
 
 node = dfgs(problem1)
 if(node):
-    print(node.solution())
+    print(*node.solution(), sep='\n')
 else:
     print("No solution found")
+print("\n")
 
 node = dfgs(problem2)
 if(node):
-    print(node.solution())
+    print(*node.solution(), sep='\n')
 else:
     print("No solution found")
