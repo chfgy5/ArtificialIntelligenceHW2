@@ -3,19 +3,18 @@ import problem
 
 def idts(problem):
     import itertools
+    nodesExplored = 0
 
-    def dfs(problem, max_depth):
-        frontier = [Node(problem.initial)]  # Stack
-
+    for max_depth in itertools.count():
+        # dfs
+        frontier = [Node(problem.initial)]
         while frontier:
             node = frontier.pop()
             if problem.goal_test(node.state):
                 return node
+            if nodesExplored > 1000000:
+                return None
             if node.depth < max_depth:
+                nodesExplored += 1
                 frontier.extend(node.expand(problem))
-        return None
-
-    for depth in itertools.count():
-        node = dfs(problem, depth)
-        if node:
-            return node
+    return None
